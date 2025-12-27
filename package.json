@@ -9,6 +9,11 @@
     "url": "https://yvas.me"
   },
   "license": "MIT",
+  "homepage": "https://savy011.github.io/tilt-svelte/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Savy011/tilt-svelte"
+  },
   "keywords": [
     "svelte",
     "tilt",
