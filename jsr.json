@@ -1,0 +1,10 @@
+{
+  "name": "@savy011/tilt-svelte",
+  "version": "1.0.0",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
+    }
+  }
+}

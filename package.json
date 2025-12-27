@@ -3,7 +3,11 @@
   "type": "module",
   "version": "1.0.0",
   "description": "A smooth 3D tilt Svelte Attachment",
-  "author": "",
+  "author": {
+    "name": "Savy",
+    "email": "savy.novachez011@proton.me",
+    "url": "https://yvas.me"
+  },
   "license": "MIT",
   "keywords": [
     "svelte",
