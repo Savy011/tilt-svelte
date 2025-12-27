@@ -168,7 +168,7 @@ bunx jsr add ${pkg_name}`;
 <h2 id="examples">Examples</h2>
 
 {#each EXAMPLES as example}
-  <h3 id="examples-{example.title.toLowerCase().replace(' ', '-')}">
+  <h3 id="examples-{example.title.toLowerCase().replace(/ /g, '-')}">
     {example.title}
   </h3>
 
