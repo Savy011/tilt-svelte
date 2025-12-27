@@ -3,8 +3,7 @@
   import tilt from "../lib/index.ts";
 
   const stringifyOpts = (opts?: Partial<TiltOptions>) => {
-    if (!opts || Object.keys(opts).length === 0)
-      return "";
+    if (!opts || Object.keys(opts).length === 0) return "";
 
     const entries = Object.entries(opts).map(([key, value]) => {
       const quotedKey = key.includes("-") ? `"${key}"` : key;
@@ -38,9 +37,9 @@
     },
     {
       title: "Glare Effect",
-      opts: { "glare": true, "max-glare": 0.8 },
+      opts: { glare: true, "max-glare": 0.8 },
       description:
-        "Setting this option will enable a glare effect. You can tweak the glare value with \"max-glare\" option.",
+        'Setting this option will enable a glare effect. You can tweak the glare value with "max-glare" option.',
       steps: [
         "Import tilt.",
         "Attach it to the target element.",
@@ -74,7 +73,7 @@
       title: "Start tilt position",
       description:
         "Setting this option will tilt the element at specific degrees at page load. `reset-to-start` - on mouse leave will reset the position to [startX, startY]",
-      opts: { "startX": 20, "startY": -20, "reset-to-start": true },
+      opts: { startX: 20, startY: -20, "reset-to-start": true },
     },
     {
       title: "Disable X axis",
@@ -98,7 +97,6 @@ pnpm add ${pkg_name}
 
 # if you are using Yarn
 yarn add ${pkg_name}
-
 
 # If you are using Bun
 bun add ${pkg_name}`;
@@ -145,6 +143,11 @@ bunx jsr add ${pkg_name}`;
   <a href="https://github.com/micku7zu/vanilla-tilt.js"> vanilla-tilt.js </a>
 </p>
 
+<p>
+  You can play around and test different options for the attachment in the
+  <a href="/playground">Playground</a>
+</p>
+
 <h2 id="installation">Installation</h2>
 
 <p>
@@ -163,7 +166,7 @@ bunx jsr add ${pkg_name}`;
 <h2 id="examples">Examples</h2>
 
 {#each EXAMPLES as example}
-  <h3 id="examples-{example.title.toLowerCase().replace(" ", "-")}">
+  <h3 id="examples-{example.title.toLowerCase().replace(' ', '-')}">
     {example.title}
   </h3>
 
