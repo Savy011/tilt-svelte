@@ -1,8 +1,17 @@
 <script lang="ts">
   import "@owickstrom/the-monospace-web";
 
+  let scrollY = $state(0);
+  const visible = $derived(scrollY >= 500);
+
+  function onclick() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   const { children } = $props();
 </script>
+
+<svelte:window bind:scrollY />
 
 <table class="header">
   <tbody>
@@ -23,7 +32,9 @@
     <tr>
       <th class="width-min">Author</th>
       <td class="width-auto">
-        <a href="https://yvas.me"><cite>Savy</cite></a>
+        <a href="https://yvas.me" target="_blank" rel="noreferrer noopener">
+          Savy
+        </a>
       </td>
       <th class="width-min">License</th>
       <td>{import.meta.env.PKG_LICENSE}</td>
@@ -33,7 +44,14 @@
 
 {@render children()}
 
-<footer>Made by Savy</footer>
+<hr />
+
+<footer>
+  Made by
+  <a href="https://yvas.me" target="_blank" rel="noreferrer noopener"> Savy </a>
+</footer>
+
+<button {onclick} class:visible>&uarr;</button>
 
 <style>
   :global(li) {
@@ -44,5 +62,25 @@
     border: var(--border-thickness) solid var(--text-color-alt);
     padding: 0.5rem;
     background-color: var(--background-color-alt);
+  }
+
+  :global(a[href^="http"]::after) {
+    content: "↗" / ", external";
+  }
+
+  button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease-out;
+    width: 40px;
+    height: 40px;
+
+    &.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 </style>
