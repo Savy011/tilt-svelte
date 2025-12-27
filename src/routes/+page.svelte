@@ -1,5 +1,7 @@
 <script lang="ts">
   import type { TiltOptions } from "../lib/index.ts";
+
+  import { resolve } from "$app/paths";
   import tilt from "../lib/index.ts";
 
   const stringifyOpts = (opts?: Partial<TiltOptions>) => {
@@ -145,7 +147,7 @@ bunx jsr add ${pkg_name}`;
 
 <p>
   You can play around and test different options for the attachment in the
-  <a href="/playground">Playground</a>
+  <a href={resolve("/playground")}>Playground</a>
 </p>
 
 <h2 id="installation">Installation</h2>
