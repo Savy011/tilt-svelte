@@ -1,4 +1,4 @@
-name: Deploy static SvelteKit content to Pages
+name: Deploy Docs to Pages
 
 on:
   push:
@@ -39,7 +39,7 @@ jobs:
       - name: Build site
         run: pnpm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: build/
   deploy:
