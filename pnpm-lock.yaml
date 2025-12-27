@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      vanilla-tilt:
+        specifier: ^1.8.1
+        version: 1.8.1
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^7.0.0
@@ -569,6 +573,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  vanilla-tilt@1.8.1:
+    resolution: {integrity: sha512-hPB1XUsnh+SIeVSW2beb5RnuFxz4ZNgxjGD78o52F49gS4xaoLeEMh9qrQnJrnEn/vjjBI7IlxrrXmz4tGV0Kw==}
+
   vite@7.3.0:
     resolution: {integrity: sha512-dZwN5L1VlUBewiP6H9s2+B3e3Jg96D0vzN+Ry73sOefebhYr9f94wwkMNN/9ouoU8pV1BqA1d1zGk8928cx0rg==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -1058,6 +1065,8 @@ snapshots:
   totalist@3.0.1: {}
 
   typescript@5.9.3: {}
+
+  vanilla-tilt@1.8.1: {}
 
   vite@7.3.0:
     dependencies:
