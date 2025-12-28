@@ -1,7 +1,13 @@
 {
   "name": "@savy011/tilt-svelte",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "exports": "./src/lib/index.ts",
-  "exclude": ["**/*", ".github", "!LICENSE", "!package.json", "!src/lib"]
+  "publish": {
+    "include": [
+      "LICENSE",
+      "README.md",
+      "src/lib/*.ts"
+    ]
+  }
 }

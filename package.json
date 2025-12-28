@@ -1,7 +1,7 @@
 {
   "name": "@savy011/tilt-svelte",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A smooth 3D tilt Svelte Attachment",
   "author": {
     "name": "Savy",
@@ -16,6 +16,8 @@
   },
   "keywords": [
     "svelte",
+    "svelte-5",
+    "attachment",
     "tilt",
     "60fps",
     "smooth",
