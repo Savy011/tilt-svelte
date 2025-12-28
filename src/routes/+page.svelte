@@ -136,6 +136,7 @@ bunx jsr add ${pkg_name}`;
       </li>
     {/each}
   </ul>
+  <li><a href="#credits" id="toc-credits">Credits</a></li>
 </ul>
 
 <h2 id="introduction">Introduction</h2>
@@ -190,6 +191,25 @@ bunx jsr add ${pkg_name}`;
 
   <pre><code>{@html EXAMPLE_CODE(example.opts)}</code></pre>
 {/each}
+
+<h2 id="credits">Credits</h2>
+
+<ul>
+  <li>
+    Original idea:
+    <a href="https://github.com/gijsroge/tilt.js">tilt.js</a>
+  </li>
+  <li>
+    Based on:
+    <a href="https://github.com/micku7zu/vanilla-tilt.js">vanilla-tilt</a>
+  </li>
+  <li>
+    Documentation styling using:
+    <a href="https://github.com/owickstrom/the-monospace-web/">
+      The Monospace Web
+    </a>
+  </li>
+</ul>
 
 <style>
   div.box {
