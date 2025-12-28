@@ -9,7 +9,51 @@
   }
 
   const { children } = $props();
+
+  const meta = {
+    title: "Tilt Svelte",
+    description: "Documentation for @savy011/tilt-svelte",
+  };
 </script>
+
+<svelte:head>
+  <meta name="title" content={meta.title} />
+  <meta name="description" content={meta.description} />
+  <meta
+    name="keywords"
+    content="npm, jsr, @savy011/tilt-svelte, typescript, svelte, svelte-5, svelte-attachement"
+  />
+  <meta name="author" content="Savy" />
+
+  <meta name="npm-package" content={import.meta.env.PKG_NAME} />
+  <meta name="repository" content="https://github.com/Savy011/tilt-svelte" />
+  <link rel="me" href="https://github.com/Savy011" />
+
+  <meta name="license" content={import.meta.env.PKG_LICENSE} />
+  <meta name="version" content={import.meta.env.PKG_VERSION} />
+
+  <meta property="og:title" content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  <meta
+    property="og:image"
+    content="https://savy011.github.io/tilt-svelte/og-image.png"
+  />
+  <meta property="og:url" content="https://savy011.github.io/tilt-svelte" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={meta.title} />
+  <meta name="twitter:description" content={meta.description} />
+  <meta
+    name="twitter:image"
+    content="https://savy011.github.io/tilt-svelte/og-image.png"
+  />
+
+  <link rel="canonical" href="https://savy011.github.io/tilt-svelte" />
+
+  <meta name="theme-color" content="#ffffff" />
+
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" />
+</svelte:head>
 
 <svelte:window bind:scrollY />
 

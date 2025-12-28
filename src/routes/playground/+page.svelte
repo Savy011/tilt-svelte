@@ -33,7 +33,12 @@
   }
 </script>
 
+<svelte:head>
+  <title>Playground - Tilt Svelte</title>
+</svelte:head>
+
 <h2 id="playground">Playground</h2>
+
 <figure>
   <div class="logo" id="logo" {@attach tilt(options)}>
     <span>tilt-svelte</span>

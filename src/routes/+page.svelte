@@ -5,7 +5,8 @@
   import tilt from "../lib/index.ts";
 
   const stringifyOpts = (opts?: Partial<TiltOptions>) => {
-    if (!opts || Object.keys(opts).length === 0) return "";
+    if (!opts || Object.keys(opts).length === 0)
+      return "";
 
     const entries = Object.entries(opts).map(([key, value]) => {
       const quotedKey = key.includes("-") ? `"${key}"` : key;
@@ -39,9 +40,9 @@
     },
     {
       title: "Glare Effect",
-      opts: { glare: true, "max-glare": 0.8 },
+      opts: { "glare": true, "max-glare": 0.8 },
       description:
-        'Setting this option will enable a glare effect. You can tweak the glare value with "max-glare" option.',
+        "Setting this option will enable a glare effect. You can tweak the glare value with \"max-glare\" option.",
       steps: [
         "Import tilt.",
         "Attach it to the target element.",
@@ -75,7 +76,7 @@
       title: "Start tilt position",
       description:
         "Setting this option will tilt the element at specific degrees at page load. `reset-to-start` - on mouse leave will reset the position to [startX, startY]",
-      opts: { startX: 20, startY: -20, "reset-to-start": true },
+      opts: { "startX": 20, "startY": -20, "reset-to-start": true },
     },
     {
       title: "Disable X axis",
@@ -120,6 +121,10 @@ yarn dlx jsr add ${pkg_name}
 bunx jsr add ${pkg_name}`;
 </script>
 
+<svelte:head>
+  <title>Tilt Svelte</title>
+</svelte:head>
+
 <h2 id="toc-title">Contents</h2>
 
 <ul>
@@ -154,8 +159,11 @@ bunx jsr add ${pkg_name}`;
 <h2 id="installation">Installation</h2>
 
 <p>
-  The package is available on <a href="https://npmjs.org">npm</a> and
-  <a href="https://jsr.io/">jsr</a>.
+  The package is available on <a href="https://npmjs.org/@savy011/tilt-svelte"
+  >npm</a
+  >
+  and
+  <a href="https://jsr.io/@savy011/tilt-svelte">jsr</a>.
 </p>
 
 <ul>
@@ -169,7 +177,7 @@ bunx jsr add ${pkg_name}`;
 <h2 id="examples">Examples</h2>
 
 {#each EXAMPLES as example}
-  <h3 id="examples-{example.title.toLowerCase().replace(/ /g, '-')}">
+  <h3 id="examples-{example.title.toLowerCase().replace(/ /g, "-")}">
     {example.title}
   </h3>
 

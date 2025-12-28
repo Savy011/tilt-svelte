@@ -5,7 +5,7 @@ You can play around and test different options for the attachment in the [Playgr
 
 ## Installation
 
-The package is available on npm and jsr.
+The package is available on [npm](https://www.npmjs.com/package/@savy011/tilt-svelte) and [jsr](https://jsr.io/@savy011/tilt-svelte).
 
 - Using npm:
 
