@@ -1,58 +1,62 @@
-# Svelte library
+# Tilt Svelte
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+A smooth 3D tilt Svelte attachment based on [vanilla-tilt.js](https://github.com/micku7zu/vanilla-tilt.js).
+You can play around and test different options for the attachment in the [Playground](https://savy011.github.io/tilt-svelte/playground).
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## Installation
 
-## Creating a project
+The package is available on npm and jsr.
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Using npm:
 
-```sh
-# create a new project in the current directory
-npx sv create
+```bash
+# If you are using npm
+npm install @savy011/tilt-svelte
 
-# create a new project in my-app
-npx sv create my-app
+# if you are using pnpm
+pnpm add @savy011/tilt-svelte
+
+# if you are using Yarn
+yarn add @savy011/tilt-svelte
+
+# If you are using Bun
+bun add @savy011/tilt-svelte
 ```
 
-## Developing
+- Using jsr:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```bash
+# if you are using a recent version of pnpm (>10.9)
+pnpm install jsr:@savy011/tilt-svelte
 
-```sh
-npm run dev
+# if you are using a recent version of Yarn (>4.9)
+yarn add jsr:@savy011/tilt-svelte
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# If you are using npm, an older version of pnpm or Yarn
+npx jsr add @savy011/tilt-svelte
+pnpm dlx jsr add @savy011/tilt-svelte
+yarn dlx jsr add @savy011/tilt-svelte
+
+# If you are using Bun
+bunx jsr add @savy011/tilt-svelte
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+## Examples
 
-## Building
+- Basic Usage
 
-To build your library:
+```html
+<script>
+  import tilt from "@savy011/tilt-svelte";
+</script>
 
-```sh
-npm pack
+<div {@attach tilt()}></div>
 ```
 
-To create a production version of your showcase app:
+Advanced examples for the package are available on the [project homepage](https://savy011.github.io/tilt-svelte/#examples)
 
-```sh
-npm run build
-```
+## Credits
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```sh
-npm publish
-```
+- Original idea: [tilt.js](https://github.com/gijsroge/tilt.js)
+- Based on: [vanilla-tilt](https://github.com/micku7zu/vanilla-tilt.js)
+- Documentation styling using: [The Monospace Web](https://github.com/owickstrom/the-monospace-web/)
