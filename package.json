@@ -1,7 +1,7 @@
 {
   "name": "@savy011/tilt-svelte",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A smooth 3D tilt Svelte Attachment",
   "author": {
     "name": "Savy",
