@@ -55,7 +55,6 @@ export async function GET() {
                       borderRight: "4px solid black",
                     },
                     children: [
-                      // Top section - title area
                       {
                         type: "div",
                         props: {
@@ -92,7 +91,6 @@ export async function GET() {
                           ],
                         },
                       },
-                      // Bottom section - author and install commands
                       {
                         type: "div",
                         props: {
@@ -191,7 +189,6 @@ export async function GET() {
                     ],
                   },
                 },
-                // Right column - metadata
                 {
                   type: "div",
                   props: {
@@ -201,7 +198,6 @@ export async function GET() {
                       width: "280px",
                     },
                     children: [
-                      // Top right - version/updated/license
                       {
                         type: "div",
                         props: {
@@ -286,7 +282,9 @@ export async function GET() {
                                         alignItems: "center",
                                         justifyContent: "flex-end",
                                       },
-                                      children: "2025-12-28",
+                                      children: new Date().toLocaleDateString(
+                                        "en-CA",
+                                      ),
                                     },
                                   },
                                 ],

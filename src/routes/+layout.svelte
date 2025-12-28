@@ -70,7 +70,9 @@
     <tr>
       <th>Updated</th>
       <td class="width-min">
-        <time style="white-space: pre;">2025-12-27</time>
+        <time style="white-space: pre;">
+          {new Date().toLocaleDateString("en-CA")}
+        </time>
       </td>
     </tr>
     <tr>
