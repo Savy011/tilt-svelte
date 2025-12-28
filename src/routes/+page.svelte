@@ -194,7 +194,7 @@ bunx jsr add ${pkg_name}`;
   {/if}
 
   <figure>
-    <div class="box" {@attach tilt(example.opts || {})}></div>
+    <div class="box" {@attach tilt({ max: 25, ...example.opts })}></div>
   </figure>
 
   <pre><code>{@html EXAMPLE_CODE(example.opts)}</code></pre>

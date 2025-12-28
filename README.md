@@ -5,8 +5,6 @@
   <a href="https://jsr.io/@savy011/tilt-svelte"><img alt="JSR Version" src="https://img.shields.io/jsr/v/%40savy011/tilt-svelte?style=for-the-badge&logo=jsr" /></a>
 </p>
 
-
-
 A smooth 3D tilt Svelte attachment based on [vanilla-tilt.js](https://github.com/micku7zu/vanilla-tilt.js).
 You can play around and test different options for the attachment in the [Playground](https://savy011.github.io/tilt-svelte/playground).
 
