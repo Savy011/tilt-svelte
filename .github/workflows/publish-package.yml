@@ -4,14 +4,14 @@ on:
   push:
     branches:
       - main
-
-jobs:
-  publish:
-    runs-on: ubuntu-latest
     paths:
       - "src/lib/**"
       - package.json
       - "!src/routes/**"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       id-token: write
