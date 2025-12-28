@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@sveltejs/adapter-static':
-        specifier: ^3.0.10
-        version: 3.0.10(@sveltejs/kit@2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2)))(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2)))
       vanilla-tilt:
         specifier: ^1.8.1
         version: 1.8.1
@@ -21,9 +18,9 @@ importers:
       '@owickstrom/the-monospace-web':
         specifier: ^0.1.5
         version: 0.1.5
-      '@sveltejs/adapter-auto':
-        specifier: ^7.0.0
-        version: 7.0.0(@sveltejs/kit@2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2)))(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2)))
+      '@sveltejs/adapter-static':
+        specifier: ^3.0.10
+        version: 3.0.10(@sveltejs/kit@2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2)))(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2)))
       '@sveltejs/kit':
         specifier: ^2.49.1
         version: 2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2)))(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2))
@@ -551,11 +548,6 @@ packages:
     resolution: {integrity: sha512-esgN+54+q0NjB0Y/4BomT9samII7jGwNy/2a3wNZbT2A2RpmXsXwUt24LvLhx6jUq2gVk4cWEvcRO6MFQbOfNA==}
     peerDependencies:
       acorn: ^8.9.0
-
-  '@sveltejs/adapter-auto@7.0.0':
-    resolution: {integrity: sha512-ImDWaErTOCkRS4Gt+5gZuymKFBobnhChXUZ9lhUZLahUgvA4OOvRzi3sahzYgbxGj5nkA6OV0GAW378+dl/gyw==}
-    peerDependencies:
-      '@sveltejs/kit': ^2.0.0
 
   '@sveltejs/adapter-static@3.0.10':
     resolution: {integrity: sha512-7D9lYFWJmB7zxZyTE/qxjksvMqzMuYrrsyh1f4AlZqeZeACPRySjbC3aFiY55wb1tWUaKOQG9PVbm74JcN2Iew==}
@@ -2305,10 +2297,6 @@ snapshots:
   '@sveltejs/acorn-typescript@1.0.8(acorn@8.15.0)':
     dependencies:
       acorn: 8.15.0
-
-  '@sveltejs/adapter-auto@7.0.0(@sveltejs/kit@2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2)))(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2)))':
-    dependencies:
-      '@sveltejs/kit': 2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2)))(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2))
 
   '@sveltejs/adapter-static@3.0.10(@sveltejs/kit@2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2)))(svelte@5.46.1)(vite@7.3.0(yaml@2.8.2)))':
     dependencies:
