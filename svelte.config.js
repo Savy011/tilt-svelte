@@ -10,7 +10,7 @@ const config = {
     appDir: "assets",
     adapter: adapter(),
     paths: {
-      base: process.env.NODE_ENV === "production" ? "/tile-svelte" : "",
+      base: process.env.NODE_ENV === "production" ? "/tilt-svelte" : "",
     },
   },
 };

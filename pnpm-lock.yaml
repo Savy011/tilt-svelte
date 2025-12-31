@@ -15,9 +15,9 @@ importers:
       '@antfu/eslint-config':
         specifier: ^6.7.3
         version: 6.7.3(@vue/compiler-sfc@3.5.26)(eslint-plugin-format@1.1.0(eslint@9.39.2))(eslint-plugin-svelte@3.13.1(eslint@9.39.2)(svelte@5.46.1))(eslint@9.39.2)(svelte-eslint-parser@1.4.1(svelte@5.46.1))(typescript@5.9.3)
-      '@owickstrom/the-monospace-web':
-        specifier: ^0.1.5
-        version: 0.1.5
+      '@fontsource-variable/jetbrains-mono':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@resvg/resvg-js':
         specifier: ^2.6.2
         version: 2.6.2
@@ -381,6 +381,9 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@fontsource-variable/jetbrains-mono@5.2.8':
+    resolution: {integrity: sha512-WBA9elru6Jdp5df2mES55wuOO0WIrn3kpXnI4+W2ek5u3ZgLS9XS4gmIlcQhiZOWEKl95meYdvK7xI+ETLCq/Q==}
+
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
     engines: {node: '>=18.18.0'}
@@ -412,9 +415,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
-
-  '@owickstrom/the-monospace-web@0.1.5':
-    resolution: {integrity: sha512-kEOFm1vL3Ut2e2XrNUjmogccyr3rrmOMpULpkim37wPD0uxeFW5XBZwbfPMOlLF3aLeTxl83CKyOhOxW+D4Fjg==}
 
   '@pkgr/core@0.2.9':
     resolution: {integrity: sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA==}
@@ -2329,6 +2329,8 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
+  '@fontsource-variable/jetbrains-mono@5.2.8': {}
+
   '@humanfs/core@0.19.1': {}
 
   '@humanfs/node@0.16.7':
@@ -2358,8 +2360,6 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
-
-  '@owickstrom/the-monospace-web@0.1.5': {}
 
   '@pkgr/core@0.2.9': {}
 

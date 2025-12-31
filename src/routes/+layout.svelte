@@ -1,5 +1,7 @@
 <script lang="ts">
-  import "@owickstrom/the-monospace-web";
+  import "@fontsource-variable/jetbrains-mono";
+  import "../reset.css";
+  import "../app.css";
 
   let scrollY = $state(0);
   const visible = $derived(scrollY >= 500);
@@ -8,7 +10,7 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  const { children } = $props();
+  const { data, children } = $props();
 
   const meta = {
     title: "Tilt Svelte",
@@ -71,7 +73,7 @@
       <th>Updated</th>
       <td class="width-min">
         <time style="white-space: pre;">
-          {new Date().toLocaleDateString("en-CA")}
+          {data.build_date}
         </time>
       </td>
     </tr>
