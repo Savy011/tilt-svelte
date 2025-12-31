@@ -32,7 +32,7 @@
   box-sizing: border-box;
 }
 
-*+* {
+* + * {
   margin-top: var(--line-height);
 }
 
@@ -152,13 +152,14 @@ table {
 th,
 td {
   border: var(--border-thickness) solid var(--text-color);
-  padding: calc((var(--line-height) / 2)) calc(1ch - var(--border-thickness) / 2) calc((var(--line-height) / 2) - (var(--border-thickness)));
+  padding: calc((var(--line-height) / 2)) calc(1ch - var(--border-thickness) / 2)
+    calc((var(--line-height) / 2) - (var(--border-thickness)));
   line-height: var(--line-height);
   vertical-align: top;
   text-align: left;
 }
 
-table tbody tr:first-child>* {
+table tbody tr:first-child > * {
   padding-top: calc((var(--line-height) / 2) - var(--border-thickness));
 }
 
@@ -455,8 +456,8 @@ label input {
   margin-bottom: var(--line-height);
 }
 
-.grid>*,
-.grid>input {
+.grid > *,
+.grid > input {
   flex: 0 0 calc(round(down, (100% - (1ch * (var(--grid-cells) - 1))) / var(--grid-cells), 1ch));
 }
 
