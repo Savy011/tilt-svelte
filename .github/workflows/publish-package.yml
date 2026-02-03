@@ -4,13 +4,10 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "src/lib/**"
-      - package.json
-      - "!src/routes/**"
 
 jobs:
-  publish:
+  publish-npm:
+    if: contains(github.event.head_commit.message, 'publish:npm') || contains(github.event.head_commit.message, 'publish:all')
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -35,5 +32,27 @@ jobs:
         run: pnpm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  publish-jsr:
+    if: contains(github.event.head_commit.message, 'publish:jsr') || contains(github.event.head_commit.message, 'publish:all')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10
+      - name: Install Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm i
+      - name: Build Package
+        run: pnpm run build
       - name: Publish to JSR
         run: pnpm dlx jsr publish
