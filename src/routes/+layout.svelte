@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolve } from "$app/paths";
   import "@fontsource-variable/jetbrains-mono";
   import "../reset.css";
   import "../app.css";
@@ -63,7 +64,9 @@
   <tbody>
     <tr>
       <td colspan="2" rowspan="2" class="width-auto">
-        <h1 class="title">Tilt Svelte</h1>
+        <h1 class="title">
+          <a href={resolve("/")}>Tilt Svelte</a>
+        </h1>
         <span class="subtitle">A smooth 3D tilt Svelte Attachment</span>
       </td>
       <th>Version</th>
@@ -114,6 +117,13 @@
 
   :global(a[href^="http"]::after) {
     content: "↗" / ", external";
+  }
+
+  :global(h3::before),
+  :global(h4::before),
+  :global(h5::before),
+  :global(h6::before) {
+    content: "# ";
   }
 
   button {

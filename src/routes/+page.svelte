@@ -2,26 +2,9 @@
   import type { TiltOptions } from "../lib/index.ts";
 
   import { resolve } from "$app/paths";
-  import tilt from "../lib/index.ts";
 
-  const stringifyOpts = (opts?: Partial<TiltOptions>) => {
-    if (!opts || Object.keys(opts).length === 0)
-      return "";
-
-    const entries = Object.entries(opts).map(([key, value]) => {
-      const quotedKey = key.includes("-") ? `"${key}"` : key;
-      const quotedValue = typeof value === "string" ? `"${value}"` : value;
-      return `${quotedKey}: ${quotedValue}`;
-    });
-
-    return `{ ${entries.join(", ")} }`;
-  };
-
-  const EXAMPLE_CODE = (opts?: Partial<TiltOptions>) => `&lt;script&gt;
-  import tilt from &quot;@savy011/tilt-svelte&quot;;
-&lt;/script&gt;
-
-&lt;div {&#64;attach tilt(${stringifyOpts(opts) || ""})}&gt;&lt;/div&gt;`;
+  import Examples from "./examples.svelte";
+  import Installation from "./installation.svelte";
 
   type Example = {
     title: string;
@@ -91,34 +74,6 @@
       opts: { axis: "x" },
     },
   ];
-
-  const NPM_INSTRUCTIONS = (pkg_name: string) => `# If you are using npm
-npm install ${pkg_name}
-
-# if you are using pnpm
-pnpm add ${pkg_name}
-
-# if you are using Yarn
-yarn add ${pkg_name}
-
-# If you are using Bun
-bun add ${pkg_name}`;
-
-  const JSR_INSTRUCTIONS = (
-    pkg_name: string,
-  ) => `# if you are using a recent version of pnpm (>10.9)
-pnpm install jsr:${pkg_name}
-
-# if you are using a recent version of Yarn (>4.9)
-yarn add jsr:${pkg_name}
-
-# If you are using npm, an older version of pnpm or Yarn
-npx jsr add ${pkg_name}
-pnpm dlx jsr add ${pkg_name}
-yarn dlx jsr add ${pkg_name}
-
-# If you are using Bun
-bunx jsr add ${pkg_name}`;
 </script>
 
 <svelte:head>
@@ -140,6 +95,11 @@ bunx jsr add ${pkg_name}`;
         </a>
       </li>
     {/each}
+    <li>
+      <a href="#examples-programmatic-control" id="toc-programmatic-control">
+        Programmatic Control
+      </a>
+    </li>
   </ul>
   <li><a href="#credits" id="toc-credits">Credits</a></li>
 </ul>
@@ -148,7 +108,7 @@ bunx jsr add ${pkg_name}`;
 
 <p>
   A smooth 3D tilt Svelte attachment based on
-  <a href="https://github.com/micku7zu/vanilla-tilt.js"> vanilla-tilt.js </a>
+  <a href="https://github.com/micku7zu/vanilla-tilt.js">vanilla-tilt.js</a>
 </p>
 
 <p>
@@ -156,49 +116,9 @@ bunx jsr add ${pkg_name}`;
   <a href={resolve("/playground")}>Playground</a>
 </p>
 
-<h2 id="installation">Installation</h2>
+<Installation />
 
-<p>
-  The package is available on <a href="https://npmjs.org/@savy011/tilt-svelte"
-  >npm</a
-  >
-  and
-  <a href="https://jsr.io/@savy011/tilt-svelte">jsr</a>.
-</p>
-
-<ul>
-  <li>Using npm</li>
-  <pre><code>{NPM_INSTRUCTIONS(import.meta.env.PKG_NAME)}</code></pre>
-
-  <li>Using jsr:</li>
-  <pre><code>{JSR_INSTRUCTIONS(import.meta.env.PKG_NAME)}</code></pre>
-</ul>
-
-<h2 id="examples">Examples</h2>
-
-{#each EXAMPLES as example}
-  <h3 id="examples-{example.title.toLowerCase().replace(/ /g, "-")}">
-    {example.title}
-  </h3>
-
-  {#if example.description}
-    <p>{example.description}</p>
-  {/if}
-
-  {#if example.steps}
-    <ol>
-      {#each example.steps as step}
-        <li>{step}</li>
-      {/each}
-    </ol>
-  {/if}
-
-  <figure>
-    <div class="box" {@attach tilt({ max: 25, ...example.opts })}></div>
-  </figure>
-
-  <pre><code>{@html EXAMPLE_CODE(example.opts)}</code></pre>
-{/each}
+<Examples examples={EXAMPLES} />
 
 <h2 id="credits">Credits</h2>
 
@@ -218,26 +138,3 @@ bunx jsr add ${pkg_name}`;
     </a>
   </li>
 </ul>
-
-<style>
-  div.box {
-    display: block;
-    margin-inline: auto;
-    margin-block: 3rem;
-    width: 100%;
-    max-width: 200px;
-    height: 200px;
-    line-height: 200px;
-    text-align: center;
-    color: white;
-    background: linear-gradient(to bottom right, #c4afd0, #ffd076, #97e0cf);
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform: perspective(500px);
-    transform: perspective(500px);
-
-    & > :global(* + *) {
-      margin-top: unset;
-    }
-  }
-</style>
