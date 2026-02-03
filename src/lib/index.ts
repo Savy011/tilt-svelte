@@ -118,7 +118,13 @@ export default function tilt(opts: Partial<TiltOptions> = {}): Attachment {
  * <button onclick={() => tilt.reset()}>Reset</button>
  * ```
  */
-export function createTilt(opts: Partial<TiltOptions> = {}) {
+export function createTilt(opts: Partial<TiltOptions> = {}): {
+  init: () => Attachment;
+  reset: () => void;
+  getValues: () => TiltValues | undefined;
+  disable: () => void;
+  enable: () => void;
+} {
   let element: HTMLElementWithTilt | null = null;
   return {
     /**
