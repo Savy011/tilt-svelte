@@ -27,7 +27,9 @@
     "gyroscopeMaxAngleY": 45,
     "gyroscopeSamples": 10,
   };
+
   let options = $state<TiltOptions>(structuredClone(defaultOpts));
+
   function reset() {
     options = structuredClone(defaultOpts);
   }

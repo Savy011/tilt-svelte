@@ -36,6 +36,10 @@
   margin-top: var(--line-height);
 }
 
+[id] {
+  padding-top: 24px;
+}
+
 html {
   display: flex;
   width: 100%;
